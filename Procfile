@@ -1,1 +1,1 @@
-bot:node disc.js
+bot: node disc.js
