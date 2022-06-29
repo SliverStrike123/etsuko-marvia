@@ -10,6 +10,7 @@ const client = new Client({ intents: [
 const { OMT_ID, GUILD_ID } = require("../config.json");
 const { isApplicationCommandGuildInteraction } = require('discord-api-types/utils/v9');
 const GuildEmoji = require('discord.js/src/structures/GuildEmoji');
+const { Console } = require('console');
 
 
 module.exports = {
@@ -92,12 +93,12 @@ module.exports = {
         let playerBban2 = interaction.options.getString('playerbban2')
         let mplink = interaction.options.getNumber('mplink')
         
-        if(playerAban2 = 'null'){
-           playerAban2 = ''
+        if(playerAban2 === 'null'){
+           playerAban2 === ''
         }
 
-        if(playerBban2 = 'null'){
-            playerBban2 = ''
+        if(playerBban2 === 'null'){
+            playerBban2 === ''
         }
 
         if(playerAscore === playerBscore){
@@ -133,9 +134,16 @@ module.exports = {
             case 5:
                 finalA = '🔴🔴🔴🔴🔴'
                 break;
+
+            case 6:
+                finalA = '🔴🔴🔴🔴🔴🔴'
+                break;
+            
+            case 7:
+                finalA = '🔴🔴🔴🔴🔴🔴🔴'
             
             default:
-                finalA = ''
+                finalA = '_ _'
                 break;    
         }
 
@@ -161,20 +169,29 @@ module.exports = {
                 finalB = '🔵🔵🔵🔵🔵'
                 break;
             
+            case 6:
+                finalB = '🔵🔵🔵🔵🔵🔵'
+                break;
+              
+            case 7:
+                finalB = '🔵🔵🔵🔵🔵🔵🔵'
+
             default:
-                finalB = ''
+                finalB = '_ _'
                 break;    
         }
-        
-        if(playerAscore === 5){
+        if(playerAscore > playerBscore){
             playerA = `__${playerAname}__ 👑`
             playerB = playerBname
             winnerpfp = `http://a.ppy.sh/${playerAID}`
-        } else if(playerBscore === 5){
+        } else if(playerBscore > playerAscore){
             playerA = playerAname
             playerB = `__${playerBname}__ 👑`
             winnerpfp = `http://a.ppy.sh/${playerBID}`
         }
+        console.log(playerAban2)
+        console.log(playerBban2)
+
         const result = new MessageEmbed()
         .setColor('#ffe05e') 
         .setAuthor({name: `${matchID}`, iconURL: 'https://cdn.discordapp.com/attachments/656389510199771146/962211384140128266/discord_icon.png'})
