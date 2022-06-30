@@ -141,6 +141,7 @@ module.exports = {
             
             case 7:
                 finalA = '🔴🔴🔴🔴🔴🔴🔴'
+                break;
             
             default:
                 finalA = '_ _'
@@ -175,6 +176,7 @@ module.exports = {
               
             case 7:
                 finalB = '🔵🔵🔵🔵🔵🔵🔵'
+                break;
 
             default:
                 finalB = '_ _'
