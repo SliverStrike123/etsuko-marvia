@@ -88,17 +88,22 @@ module.exports = {
         let playerAscore = interaction.options.getNumber('playerascore')
         let playerBscore = interaction.options.getNumber('playerbscore')
         let playerAban1 = interaction.options.getString('playeraban1')
-        let playerAban2 = interaction.options.getString('playeraban2')
+        var playerAban2 = interaction.options.getString('playeraban2')
         let playerBban1 = interaction.options.getString('playerbban1')
-        let playerBban2 = interaction.options.getString('playerbban2')
+        var playerBban2 = interaction.options.getString('playerbban2')
         let mplink = interaction.options.getNumber('mplink')
-        
-        if(playerAban2 === 'null'){
-           playerAban2 === ''
+        console.log(playerAban2)
+        console.log(playerBban2)
+        if(playerAban2 === null){
+           playerAsecondban = '_ _'
+        } else {
+            playerAsecondban = playerAban2
         }
 
-        if(playerBban2 === 'null'){
-            playerBban2 === ''
+        if(playerBban2 === null){
+            playerBsecondban = '_ _'
+        } else {
+            playerBsecondban = playerAban2
         }
 
         if(playerAscore === playerBscore){
@@ -203,8 +208,8 @@ module.exports = {
         .addFields(
             { name: 'MP Link', value: `https://osu.ppy.sh/mp/${mplink}`  },
             { name: 'Bans:', value: '_ _'},
-            { name: `${playerAname}`, value: `${playerAban1} \n ${playerAban2}`},
-            { name: `${playerBname}`, value: `${playerBban1} \n ${playerBban2}`}
+            { name: `${playerAname}`, value: `${playerAban1} \n ${playerAsecondban}`},
+            { name: `${playerBname}`, value: `${playerBban1} \n ${playerBsecondban}`}
         )
         .setTimestamp()
         .setFooter({ text: `osu! Malaysia Tournament 2022 • Referee: ${referee}`})

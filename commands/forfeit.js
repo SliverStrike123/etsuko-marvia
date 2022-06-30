@@ -55,7 +55,6 @@ module.exports = {
 			.setTitle(`Win By Default for ${winner}`)
 			.setThumbnail(`http://a.ppy.sh/${winnerID}`)
 			.addField(`${forfeit} has forfeited the match`, '_ _', true)
-			.setImage('https://tenor.com/view/mudkip-pokemon-gif-24125499')
 			.setTimestamp()
             .setFooter({ text: `osu! Malaysia Tournament 2022` })
 
