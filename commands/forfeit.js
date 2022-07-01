@@ -51,7 +51,7 @@ module.exports = {
 
 		const result = new MessageEmbed()
 			.setColor('#ffe05e')
-			.setAuthor({name: `${matchID}`, iconURL: 'https://cdn.discordapp.com/attachments/656389510199771146/962211384140128266/discord_icon.png'})
+			.setAuthor({name: `Match ${matchID}`, iconURL: 'https://cdn.discordapp.com/attachments/656389510199771146/962211384140128266/discord_icon.png'})
 			.setTitle(`Win By Default for ${winner}`)
 			.setThumbnail(`http://a.ppy.sh/${winnerID}`)
 			.addField(`${forfeit} has forfeited the match`, '_ _', true)
