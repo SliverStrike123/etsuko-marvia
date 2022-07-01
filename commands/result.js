@@ -156,7 +156,7 @@ module.exports = {
         switch (playerBscore){
 
             case 1:
-                finalA = '🔵'
+                finalB = '🔵'
                 break;
             
             case 2:
