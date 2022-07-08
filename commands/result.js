@@ -103,7 +103,7 @@ module.exports = {
         if(playerBban2 === null){
             playerBsecondban = '_ _'
         } else {
-            playerBsecondban = playerAban2
+            playerBsecondban = playerBban2
         }
 
         if(playerAscore === playerBscore){
