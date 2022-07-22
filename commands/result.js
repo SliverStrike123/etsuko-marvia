@@ -77,9 +77,10 @@ module.exports = {
             return interaction.reply({content: 'You are not allowed to use this command or you have used this command in the wrong channel.', ephemeral:true})
         }
 
-        let message = await interaction.reply({ content: 'Generating Results...', fetchReply: true })
+        
         let referee = await interaction.user.tag
         let matchID = interaction.options.getString('matchid')
+        await interaction.reply(`Generating Results for ${matchID}`)
         let round = interaction.options.getString('round')
         let playerAname = interaction.options.getString('playera')
         let playerBname = interaction.options.getString('playerb')
@@ -217,8 +218,6 @@ module.exports = {
         let channel = await client.channels.fetch('565765676652953600')
 
         await channel.send({embeds: [result]}).catch(console.error)
-
-        await message.edit(`Results for ${matchID} sent!`).catch(console.error)
 
         await emoji1.delete()
             .then(console.log('emote1 has been deleted'))
