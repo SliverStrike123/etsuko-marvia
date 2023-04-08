@@ -93,6 +93,8 @@ module.exports = {
         let playerBban1 = interaction.options.getString('playerbban1')
         var playerBban2 = interaction.options.getString('playerbban2')
         let mplink = interaction.options.getNumber('mplink')
+        let playerAprotect = interaction.options.getString('playeraprotect')
+        let playerBprotect = interaction.options.getString('playerbprotect')
         console.log(playerAban2)
         console.log(playerBban2)
         if(playerAban2 === null){
@@ -208,6 +210,9 @@ module.exports = {
         .addField(`${playerApfp} ${playerA}`,`${finalA}`,true).addField(`${playerBpfp} ${playerB}`,`${finalB}`,true)
         .addFields(
             { name: 'MP Link', value: `https://osu.ppy.sh/mp/${mplink}`  },
+            { name: 'Protect Picks:', value: '_ _'},
+            { name: `${playerAname}`, value: `${playerAprotect}`},
+            { name: `${playerBname}`, value: `${playerBprotect}`},
             { name: 'Bans:', value: '_ _'},
             { name: `${playerAname}`, value: `${playerAban1} \n ${playerAsecondban}`},
             { name: `${playerBname}`, value: `${playerBban1} \n ${playerBsecondban}`}
