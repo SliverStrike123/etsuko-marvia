@@ -64,11 +64,11 @@ module.exports = {
         .addStringOption(option =>
             option.setName('playeraban2')
             .setDescription('Second Ban of Player A')
-            .setRequired(false))
+            .setRequired(true))
         .addStringOption(option =>
             option.setName('playerbban2')
             .setDescription('Second Ban of Player B')
-            .setRequired(false)),
+            .setRequired(true)),
 
 
     async execute(interaction){
