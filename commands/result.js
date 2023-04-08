@@ -74,7 +74,7 @@ module.exports = {
             .setDescription('Protected Pick of Player A')
             .setRequired(true))
         .addStringOption(option =>
-            option.setName('playerbban2')
+            option.setName('playerbprotect')
             .setDescription('Protected Pick of Player B')
             .setRequired(true)),
 
