@@ -64,10 +64,18 @@ module.exports = {
         .addStringOption(option =>
             option.setName('playeraban2')
             .setDescription('Second Ban of Player A')
-            .setRequired(true))
+            .setRequired(false))
         .addStringOption(option =>
             option.setName('playerbban2')
             .setDescription('Second Ban of Player B')
+            .setRequired(false))
+        .addStringOption(option =>
+            option.setName('playeraprotect')
+            .setDescription('Protected Pick of Player A')
+            .setRequired(true))
+        .addStringOption(option =>
+            option.setName('playerbban2')
+            .setDescription('Protected Pick of Player B')
             .setRequired(true)),
 
 
