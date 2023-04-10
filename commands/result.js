@@ -62,22 +62,21 @@ module.exports = {
             .setDescription('First Ban of Player B')
             .setRequired(true))
         .addStringOption(option =>
-            option.setName('playeraban2')
-            .setDescription('Second Ban of Player A')
-            .setRequired(false))
-        .addStringOption(option =>
-            option.setName('playerbban2')
-            .setDescription('Second Ban of Player B')
-            .setRequired(false))
-        .addStringOption(option =>
             option.setName('playeraprotect')
             .setDescription('Protected Pick of Player A')
             .setRequired(true))
         .addStringOption(option =>
             option.setName('playerbprotect')
             .setDescription('Protected Pick of Player B')
-            .setRequired(true)),
-
+            .setRequired(true))
+        .addStringOption(option =>
+            option.setName('playeraban2')
+            .setDescription('Second Ban of Player A')
+            .setRequired(false))
+        .addStringOption(option =>
+            option.setName('playerbban2')
+            .setDescription('Second Ban of Player B')
+            .setRequired(false)),
 
     async execute(interaction){
 
