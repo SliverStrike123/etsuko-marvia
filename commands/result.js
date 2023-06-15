@@ -211,7 +211,7 @@ module.exports = {
 
         const result = new MessageEmbed()
         .setColor('#ffe05e') 
-        .setAuthor({name: `Match ${matchID}`, iconURL: 'https://cdn.discordapp.com/attachments/656389510199771146/962211384140128266/discord_icon.png'})
+        .setAuthor({name: `Match ${matchID}`, iconURL: 'https://cdn.discordapp.com/attachments/656389510199771146/1106867575473831966/server_icon.png'})
         .setTitle(`${round}`)
         .setThumbnail(winnerpfp)
         .addField(`${playerApfp} ${playerA}`,`${finalA}`,true).addField(`${playerBpfp} ${playerB}`,`${finalB}`,true)
@@ -225,7 +225,7 @@ module.exports = {
             { name: `${playerBname}`, value: `${playerBban1} \n ${playerBsecondban}`}
         )
         .setTimestamp()
-        .setFooter({ text: `osu! Malaysia Tournament 2022 • Referee: ${referee}`})
+        .setFooter({ text: `osu! Malaysia Tournament 2023 • Referee: ${referee}`})
         
         let channel = await client.channels.fetch('565765676652953600')
 
